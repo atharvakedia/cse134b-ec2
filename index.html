@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal portfolio homepage for Atharva, a computer science student — now with an unlockable 8-bit arcade mode.">
+  <meta name="theme-color" content="#fafaf7">
+  <title>Atharva — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=VT323&amp;display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+      <svg viewBox="0 0 40 40" width="32" height="32" role="img" aria-label="Site logo, letter A monogram"><rect x="1" y="1" width="38" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="2"></rect><text x="20" y="27" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="currentColor">A</text></svg>
+      <span>Atharva</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" aria-pressed="false" hidden>
+      <span class="coin" aria-hidden="true"></span>
+      <span id="theme-toggle-label">Insert coin — 8-bit mode</span>
+    </button>
+  </header>
+  <main>
+
+    <section id="hero">
+      <div>
+        <h1>Hi, I’m Atharva</h1>
+        <p>I’m a <b>computer science</b> student who likes building small,
+          <em>actually useful</em> web tools end-to-end — front end, back
+          end, and everything in between.</p>
+        <p><profile-badge>Open to internships</profile-badge></p>
+        <p class="hero-actions">
+          <a class="button" href="projects.html">View projects</a>
+          <a class="button button-secondary" href="assets/resume-placeholder.pdf">Résumé (PDF)</a>
+        </p>
+      </div>
+      <picture>
+        <source srcset="assets/headshot-placeholder.webp" type="image/webp">
+        <img src="assets/headshot-placeholder.png" alt="Placeholder headshot photo of Atharva" width="200" height="200">
+      </picture>
+    </section>
+
+    <hello-log></hello-log>
+
+    <section id="featured-projects">
+      <h2>Featured Projects</h2>
+      <div class="card-grid">
+        <article>
+          <img src="assets/project-alpha.png" alt="Screenshot placeholder for the TrailMate project" width="320" height="180">
+          <h3><a href="project-alpha.html">TrailMate</a></h3>
+          <p>A hiking-trail logging app with route history and personal notes.</p>
+        </article>
+        <article>
+          <img src="assets/project-beta.png" alt="Screenshot placeholder for the PixelSort Visualizer project" width="320" height="180">
+          <h3><a href="project-beta.html">PixelSort Visualizer</a></h3>
+          <p>An interactive canvas app that animates sorting algorithms step by step.</p>
+        </article>
+        <article>
+          <img src="assets/project-gamma.png" alt="Screenshot placeholder for the StudyGroup Finder project" width="320" height="180">
+          <h3><a href="project-gamma.html">StudyGroup Finder</a></h3>
+          <p>A small full-stack app that matches classmates into study groups.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <p>© 2026 Atharva.</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="https://github.com/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="currentColor">gh</text></svg> GitHub</a></li>
+        <li><a href="https://linkedin.com/in/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="currentColor">in</text></svg> LinkedIn</a></li>
+        <li><a href="mailto:atharva@example.com"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="currentColor">@</text></svg> Email</a></li>
+        <li><a href="experiments.html">Experiments (dev sandbox)</a></li>
+      </ul>
+    </nav>
+    <noscript><p>This site works without JavaScript; scripts only power optional
+      extras (the 8-bit theme toggle and two small custom elements).</p></noscript>
+    <script type="module" src="script.js"></script>
+  </footer>
+</body>
+</html>

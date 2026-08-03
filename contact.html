@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How to get in touch with Atharva.">
+  <title>Contact — Atharva</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    profile-badge {
+      display: inline-block;
+      padding: 3px 12px;
+      border: 1px solid #222222;
+      border-radius: 999px;
+      background-color: #222222;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+    }
+  </style>
+  </head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+      <svg viewBox="0 0 40 40" width="32" height="32" role="img" aria-label="Site logo, letter A monogram"><rect x="1" y="1" width="38" height="38" rx="8" fill="none" stroke="#222222" stroke-width="2"></rect><text x="20" y="27" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#222222">A</text></svg>
+      <span>Atharva</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Contact</h1>
+    <p>The fastest way to reach me is email — I check it far more often
+      than anything else here. <profile-badge>Usually replies within 2 days</profile-badge></p>
+
+    <section>
+      <h2>Direct</h2>
+      <ul>
+        <li>Email: <a href="mailto:atharva@example.com">atharva@example.com</a></li>
+        <li>GitHub: <a href="https://github.com/example" target="_blank" rel="noopener">github.com/example</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/example" target="_blank" rel="noopener">linkedin.com/in/example</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Send a Message</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your message</legend>
+          <p>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required>
+          </p>
+          <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required>
+          </p>
+          <p>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </p>
+          <button type="submit">Send Message</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <dialog open aria-label="Form status placeholder">
+      <p>This form doesn’t submit anywhere yet — it’s markup
+        only, no backend behind it yet. <button type="button">Got it</button></p>
+    </dialog>
+
+  </main>
+  <footer>
+    <p>© 2026 Atharva.</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="https://github.com/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">gh</text></svg> GitHub</a></li>
+        <li><a href="https://linkedin.com/in/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">in</text></svg> LinkedIn</a></li>
+        <li><a href="mailto:atharva@example.com"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">@</text></svg> Email</a></li>
+        <li><a href="experiments.html">Experiments (dev sandbox)</a></li>
+      </ul>
+    </nav>
+      <script src="https://analytics.example.invalid/track.js" defer></script>
+    <noscript>This site works without JavaScript; two small scripts only power optional
+      extras (a custom element on this page and a canvas sketch on the Experiments page).</noscript>
+    <script type="module" src="script.js"></script>
+  </footer>
+</body>
+</html>

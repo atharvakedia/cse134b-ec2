@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sandbox page demonstrating template, audio, video, canvas, and MathML.">
+  <title>Experiments — Atharva</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  </head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+      <svg viewBox="0 0 40 40" width="32" height="32" role="img" aria-label="Site logo, letter A monogram"><rect x="1" y="1" width="38" height="38" rx="8" fill="none" stroke="#222222" stroke-width="2"></rect><text x="20" y="27" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#222222">A</text></svg>
+      <span>Atharva</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Experiments</h1>
+    <p>A sandbox page for a few elements that don’t belong
+      anywhere in the actual portfolio narrative: <code>&#60;template&#62;</code>,
+      <code>&#60;audio&#62;</code>, <code>&#60;video&#62;</code>,
+      <code>&#60;canvas&#62;</code>, and <code>&#60;source&#62;</code>.</p>
+
+    <section>
+      <h2>Template</h2>
+      <p>The <code>&#60;template&#62;</code> element below is inert — its
+        contents are parsed but never rendered unless something clones them
+        with JavaScript, which this page intentionally doesn’t do.</p>
+      <template id="card-template">
+        <article class="tpl-card">
+          <h3>Card title</h3>
+          <p>Card body text goes here.</p>
+        </article>
+      </template>
+    </section>
+
+    <section>
+      <h2>Audio</h2>
+      <audio controls>
+        <source src="assets/sample-audio.mp3" type="audio/mpeg">
+        <source src="assets/sample-audio.ogg" type="audio/ogg">
+        Your browser doesn’t support the audio element. Here’s a
+        <a href="assets/sample-audio.mp3">direct link to the file</a> instead.
+      </audio>
+    </section>
+
+    <section>
+      <h2>Video</h2>
+      <video controls width="320" poster="assets/video-poster.png">
+        <source src="assets/sample-video.mp4" type="video/mp4">
+        <source src="assets/sample-video.webm" type="video/webm">
+        Your browser doesn’t support the video element. Here’s a
+        <a href="assets/sample-video.mp4">direct link to the file</a> instead.
+      </video>
+    </section>
+
+    <section>
+      <h2>Canvas</h2>
+      <canvas id="demo-canvas" width="300" height="150"></canvas>
+      <script>
+        var ctx = document.getElementById('demo-canvas').getContext('2d');
+        ctx.strokeStyle = '#333333';
+        ctx.strokeRect(20, 20, 120, 80);
+        ctx.beginPath();
+        ctx.arc(220, 75, 40, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.font = '14px Arial';
+        ctx.fillStyle = '#333333';
+        ctx.fillText('canvas demo', 95, 130);
+      </script>
+    </section>
+
+    <section>
+      <h2>Extra Credit — MathML</h2>
+      <p>Mass-energy equivalence, written with native <code>&#60;math&#62;</code> markup:</p>
+      <math display="block">
+        <mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup>
+      </math>
+      <p>MathML has been around since the late 1990s, but Chrome didn’t get
+        native support until <b>Chrome 109</b> in January 2023 — Firefox and
+        Safari had it for years before that. It’s a good reminder to check
+        <a href="https://caniuse.com/mathml" target="_blank" rel="noopener">caniuse.com</a>
+        before leaning on a feature like this.</p>
+    </section>
+
+  </main>
+  <footer>
+    <p>© 2026 Atharva.</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="https://github.com/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">gh</text></svg> GitHub</a></li>
+        <li><a href="https://linkedin.com/in/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">in</text></svg> LinkedIn</a></li>
+        <li><a href="mailto:atharva@example.com"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">@</text></svg> Email</a></li>
+        <li><a href="experiments.html">Experiments (dev sandbox)</a></li>
+      </ul>
+    </nav>
+    <script src="https://analytics.example.invalid/track.js" defer></script>
+    <noscript>This site works without JavaScript; two small scripts only power optional
+      extras (a custom element on this page and a canvas sketch on the Experiments page).</noscript>
+    <script type="module" src="script.js"></script>
+  </footer>
+</body>
+</html>

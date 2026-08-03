@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case study: PixelSort Visualizer, a Canvas sorting-algorithm animator.">
+  <title>PixelSort Visualizer — Atharva</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  </head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+      <svg viewBox="0 0 40 40" width="32" height="32" role="img" aria-label="Site logo, letter A monogram"><rect x="1" y="1" width="38" height="38" rx="8" fill="none" stroke="#222222" stroke-width="2"></rect><text x="20" y="27" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#222222">A</text></svg>
+      <span>Atharva</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <article>
+      <h1>PixelSort Visualizer</h1>
+      <p>
+        <span class="tag">HTML5 Canvas</span>
+        <span class="tag">Vanilla JS</span>
+      </p>
+
+      <img src="assets/pixelsort-visualizer.png" alt="Screenshot placeholder for PixelSort Visualizer" width="640" height="360">
+
+      <section>
+        <h2>Overview</h2>
+        <p>PixelSort Visualizer animates bubble sort, merge sort, and quicksort on the same random array so it’s easy to compare how they actually behave, not just their Big-O on a whiteboard.</p>
+        <p>Everything is drawn directly to a <b>&#60;canvas&#62;</b> element on every frame; there’s no DOM per bar, which is most of why it stays smooth even at a few hundred elements.</p>
+      </section>
+
+      <section>
+        <h2>Role &#38; Contributions</h2>
+        <ul>
+          <li>Solo project, built for a data structures course</li>
+          <li>Implemented all three sorting algorithms as step-generators so the animation can pause/resume</li>
+          <li>Wrote the Canvas rendering loop and the simple playback controls</li>
+        </ul>
+      </section>
+
+      <p>        <a class="button-link" href="https://github.com/example/pixelsort-visualizer">View on GitHub</a>
+        <a class="button-link" href="https://pixelsort.example.com">Live Demo</a></p>
+
+    </article>
+
+  </main>
+  <footer>
+    <p>© 2026 Atharva.</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="https://github.com/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">gh</text></svg> GitHub</a></li>
+        <li><a href="https://linkedin.com/in/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">in</text></svg> LinkedIn</a></li>
+        <li><a href="mailto:atharva@example.com"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">@</text></svg> Email</a></li>
+        <li><a href="experiments.html">Experiments (dev sandbox)</a></li>
+      </ul>
+    </nav>
+    <!-- Placeholder third-party script, e.g. analytics. Non-interactive. -->
+    <script src="https://analytics.example.invalid/track.js" defer></script>
+    <noscript>This site works without JavaScript; two small scripts only power optional
+      extras (a custom element on this page and a canvas sketch on the Experiments page).</noscript>
+    <script type="module" src="script.js"></script>
+  </footer>
+</body>
+</html>

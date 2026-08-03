@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case study: TrailMate, a hiking-trail logging web app.">
+  <title>TrailMate — Atharva</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  </head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+      <svg viewBox="0 0 40 40" width="32" height="32" role="img" aria-label="Site logo, letter A monogram"><rect x="1" y="1" width="38" height="38" rx="8" fill="none" stroke="#222222" stroke-width="2"></rect><text x="20" y="27" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#222222">A</text></svg>
+      <span>Atharva</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <article>
+      <h1>TrailMate</h1>
+      <p>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Express</span>
+        <span class="tag">MongoDB</span>
+      </p>
+
+      <img src="assets/trailmate.png" alt="Screenshot placeholder for TrailMate" width="640" height="360">
+
+      <section>
+        <h2>Overview</h2>
+        <p>TrailMate is a small web app for logging hikes: route, distance, and a couple of freeform notes per trip, so I’d stop losing that information in random text files.</p>
+        <p>The <em>hardest</em> part wasn’t the CRUD itself — it was designing a data model flexible enough for very different kinds of trails without turning the log form into a novel.</p>
+      </section>
+
+      <section>
+        <h2>Role &#38; Contributions</h2>
+        <ul>
+          <li>Designed the data model and REST API (Node.js/Express, MongoDB)</li>
+          <li>Built the entire front end, including the trail log form and history view</li>
+          <li>Wrote the deployment config and set up the hosting environment</li>
+        </ul>
+      </section>
+
+      <p>        <a class="button-link" href="https://github.com/example/trailmate">View on GitHub</a>
+        <a class="button-link" href="https://trailmate.example.com">Live Demo</a></p>
+
+      <section>
+        <h2>Live Preview</h2>
+        <iframe src="https://trailmate.example.com" title="Embedded live preview of TrailMate" width="640" height="360" loading="lazy"></iframe>
+      </section>
+
+    </article>
+
+  </main>
+  <footer>
+    <p>© 2026 Atharva.</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="https://github.com/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">gh</text></svg> GitHub</a></li>
+        <li><a href="https://linkedin.com/in/example" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">in</text></svg> LinkedIn</a></li>
+        <li><a href="mailto:atharva@example.com"><svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="#333333" stroke-width="1.5"></circle><text x="12" y="16" font-family="Arial, Helvetica, sans-serif" font-size="9" text-anchor="middle" fill="#333333">@</text></svg> Email</a></li>
+        <li><a href="experiments.html">Experiments (dev sandbox)</a></li>
+      </ul>
+    </nav>
+    <!-- Placeholder third-party script, e.g. analytics. Non-interactive. -->
+    <script src="https://analytics.example.invalid/track.js" defer></script>
+    <noscript>This site works without JavaScript; two small scripts only power optional
+      extras (a custom element on this page and a canvas sketch on the Experiments page).</noscript>
+    <script type="module" src="script.js"></script>
+  </footer>
+</body>
+</html>
