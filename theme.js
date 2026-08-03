@@ -1,14 +1,3 @@
-/* theme.js — the one JavaScript enhancement for the 8-bit extra credit.
- *
- * An "Insert coin" button in the header switches the page between the
- * default style and 8-bit arcade mode, and the choice is remembered in
- * localStorage. Loaded synchronously in <head> so a saved choice applies
- * before first paint (no flash of the wrong theme).
- *
- * Progressive enhancement: the button ships with the `hidden` attribute
- * and is only revealed here, so a visitor without JavaScript never sees
- * a control that does nothing. All page content works without this file.
- */
 (function () {
   'use strict';
 
@@ -19,7 +8,7 @@
     try {
       return localStorage.getItem(STORAGE_KEY);
     } catch (err) {
-      return null; // storage blocked (private mode etc.) — default theme
+      return null;
     }
   }
 
@@ -31,7 +20,6 @@
         localStorage.removeItem(STORAGE_KEY);
       }
     } catch (err) {
-      /* not fatal — the toggle still works for this page view */
     }
   }
 
@@ -56,7 +44,6 @@
       : 'Insert coin — 8-bit mode';
   }
 
-  // Apply any saved choice immediately (script runs before <body> parses).
   applyTheme(savedTheme());
 
   document.addEventListener('DOMContentLoaded', function () {

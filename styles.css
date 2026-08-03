@@ -1,28 +1,6 @@
-/* ==========================================================================
-   Atharva — portfolio stylesheet
-   Two themes driven by one set of CSS custom properties:
-
-     1. Default ("standard mode") — quiet paper-white, ink text, cobalt
-        accent, system fonts. Defined on :root.
-     2. 8-Bit ("arcade mode")     — https://aesthetics.fandom.com/wiki/8-Bit
-        Defined on html[data-theme="8bit"], applied by theme.js when the
-        visitor presses the "Insert coin" button in the header.
-
-   Sections:
-     1. Design tokens
-     2. Base + reset
-     3. Layout (header, main, footer)
-     4. Components (buttons, cards, badge, theme toggle, forms)
-     5. 8-bit flourishes (scanlines, cursor, HUD labels, pixel edges)
-     6. Responsive + reduced motion
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. Design tokens
-   -------------------------------------------------------------------------- */
+/* Design tokens */
 
 :root {
-  /* color */
   --bg: #fafaf7;
   --surface: #ffffff;
   --ink: #1f2328;
@@ -32,18 +10,15 @@
   --line: #d9d9d2;
   --focus: #2451cc;
 
-  /* type */
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: var(--font-body);
   --size-body: 1rem;
   --leading-body: 1.6;
 
-  /* shape + depth */
   --radius: 10px;
   --border-w: 1px;
   --shadow: 0 1px 3px rgba(31, 35, 40, 0.08);
 
-  /* spacing scale */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 1rem;
@@ -51,36 +26,31 @@
   --space-5: 2.5rem;
 }
 
-/* 8-bit mode: a night-sky NES palette. Every token above gets re-aimed;
-   components below only ever read the tokens, so the whole page flips. */
 html[data-theme="8bit"] {
   --bg: #10142c;
   --surface: #1c2145;
   --ink: #f2f2e6;
   --muted: #9aa3d1;
-  --accent: #ffd23e;   /* coin gold */
+  --accent: #ffd23e;
   --accent-ink: #10142c;
   --line: #f2f2e6;
   --focus: #ffd23e;
 
   --font-body: "VT323", "Courier New", monospace;
   --font-display: "Press Start 2P", "Courier New", monospace;
-  --size-body: 1.375rem;  /* VT323 is tiny at 1rem; scale up for readability */
+  --size-body: 1.375rem;
   --leading-body: 1.45;
 
-  --radius: 0;            /* pixels have no border-radius */
+  --radius: 0;
   --border-w: 3px;
   --shadow: 6px 6px 0 rgba(0, 0, 0, 0.85);
 
-  /* extra colors only arcade mode uses */
   --hud-cyan: #3ec0ff;
   --hud-magenta: #ff4f78;
   --hud-green: #3ecc55;
 }
 
-/* --------------------------------------------------------------------------
-   2. Base + reset
-   -------------------------------------------------------------------------- */
+/* Base */
 
 * {
   box-sizing: border-box;
@@ -122,9 +92,7 @@ img, svg, video {
   outline-offset: 3px;
 }
 
-/* --------------------------------------------------------------------------
-   3. Layout
-   -------------------------------------------------------------------------- */
+/* Layout */
 
 header {
   display: flex;
@@ -206,7 +174,6 @@ footer nav a {
   color: var(--ink);
 }
 
-/* Hero: text beside the headshot, collapsing to one column on phones */
 #hero {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -225,9 +192,7 @@ footer nav a {
   box-shadow: var(--shadow);
 }
 
-/* --------------------------------------------------------------------------
-   4. Components
-   -------------------------------------------------------------------------- */
+/* Components */
 
 .hero-actions {
   display: flex;
@@ -294,7 +259,6 @@ profile-badge {
   font-size: 0.82em;
 }
 
-/* Theme toggle (unhidden by theme.js; without JS it never appears) */
 #theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -323,7 +287,6 @@ profile-badge {
   border: 1px solid #a8811a;
 }
 
-/* Basic form styling so shared pages (contact) stay presentable */
 input, textarea, select, button {
   font: inherit;
   color: inherit;
@@ -337,12 +300,8 @@ input, textarea, select {
   max-width: 100%;
 }
 
-/* --------------------------------------------------------------------------
-   5. 8-bit flourishes (arcade mode only)
-   -------------------------------------------------------------------------- */
+/* 8-bit theme */
 
-/* CRT scanlines: a fixed, click-through overlay kept faint on purpose so
-   text contrast never drops below readable. */
 html[data-theme="8bit"] body::after {
   content: "";
   position: fixed;
@@ -356,13 +315,10 @@ html[data-theme="8bit"] body::after {
   );
 }
 
-/* Sprites stay crisp when scaled */
 html[data-theme="8bit"] img {
   image-rendering: pixelated;
 }
 
-/* Blinking terminal cursor after the h1. The `/ ""` alt text keeps it
-   silent for screen readers. */
 html[data-theme="8bit"] h1::after {
   content: "▮" / "";
   margin-left: 0.15em;
@@ -374,7 +330,6 @@ html[data-theme="8bit"] h1::after {
   50% { opacity: 0; }
 }
 
-/* HUD eyebrow over the projects heading */
 html[data-theme="8bit"] #featured-projects h2::before {
   content: "— LEVEL SELECT —" / "";
   display: block;
@@ -384,7 +339,6 @@ html[data-theme="8bit"] #featured-projects h2::before {
   color: var(--hud-cyan);
 }
 
-/* Menu selector arrow on nav links: slot is reserved so nothing shifts */
 html[data-theme="8bit"] header nav a::before {
   content: "▶ " / "";
   color: transparent;
@@ -396,7 +350,6 @@ html[data-theme="8bit"] header nav a[aria-current="page"]::before {
   color: var(--hud-magenta);
 }
 
-/* Chunky pixel-hardware edges */
 html[data-theme="8bit"] header {
   border-bottom-width: 4px;
 }
@@ -411,7 +364,7 @@ html[data-theme="8bit"] h2 {
 }
 
 html[data-theme="8bit"] h3 {
-  font-size: 0.8rem; /* Press Start 2P runs large; keep card titles tidy */
+  font-size: 0.8rem;
 }
 
 html[data-theme="8bit"] .card-grid article:hover {
@@ -419,7 +372,6 @@ html[data-theme="8bit"] .card-grid article:hover {
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.85);
 }
 
-/* Power-up badge: 1-up green with a square pixel body */
 html[data-theme="8bit"] profile-badge {
   border-radius: 0;
   background: var(--hud-green);
@@ -430,7 +382,6 @@ html[data-theme="8bit"] profile-badge {
   padding: 0.6em 1em;
 }
 
-/* The coin goes square — it's a pixel coin now */
 html[data-theme="8bit"] #theme-toggle .coin {
   border-radius: 0;
   background: var(--accent);
@@ -449,9 +400,7 @@ html[data-theme="8bit"] #theme-toggle:hover {
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.85);
 }
 
-/* --------------------------------------------------------------------------
-   6. Responsive + reduced motion
-   -------------------------------------------------------------------------- */
+/* Responsive + reduced motion */
 
 @media (max-width: 40rem) {
   header {
@@ -473,13 +422,13 @@ html[data-theme="8bit"] #theme-toggle:hover {
   }
 
   html[data-theme="8bit"] h1 {
-    font-size: 1.35rem; /* Press Start 2P needs extra headroom on phones */
+    font-size: 1.35rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html[data-theme="8bit"] h1::after {
-    animation: none; /* cursor stays visible, just doesn't blink */
+    animation: none;
   }
 
   html[data-theme="8bit"] .card-grid article:hover,
